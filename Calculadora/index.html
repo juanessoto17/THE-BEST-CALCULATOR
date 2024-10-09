@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Calculadora</title>
+</head>
+<body>
+<div class="container">
+    <h1>Calculadora</h1>
+        <input type="number" id="numero1">
+        <input type="number" id="numero2">
+    <br>
+    <div class="operadores">
+        <button  onclick="sumar()" ><b>+</b></button>
+        <button  onclick="restar()"><b>-</b></button>
+        <button  onclick="multiplicar()"><b>X</b></button>
+        <button  onclick="dividir()"><b>/</b></button>
+    </div>
+    <br>
+        <div class="operadores2">
+        <button  onclick="raiz()">RAIZ</button>
+        <button  onclick="potencia()">POTENCIA</button>
+        <br>
+        <button  onclick="absoluto()">ABSOLUTO</button>
+        <button  onclick="random()">RANDOM</button>
+    </div>
+    <br>    
+    <h2>Resultado <b>:</b></h2>
+    <input type="number" id="resultado">
+    <br>
+    <div class="operadores3">
+        <button onclick="Round()">Round</button>
+        <button onclick="Floor()">Floor</button>
+        <button onclick="Ceil()">Ceil</button>
+    </div>
+
+</div>
+<script>
+        function MostrarTotal(resultado){
+            let eR = document.getElementById("resultado");
+            eR.value = resultado;
+        }
+        function sumar(){
+            let eN1 = document.getElementById("numero1").value;
+            let eN2 = document.getElementById("numero2").value;
+            resultado = +eN1 + +eN2;
+            MostrarTotal(resultado);
+        }
+        function restar(){
+            let eN1 = document.getElementById("numero1").value;
+            let eN2 = document.getElementById("numero2").value;
+            resultado = eN1 - eN2;
+            MostrarTotal(resultado);
+        }
+        function multiplicar(){
+            let eN1 = document.getElementById("numero1").value;
+            let eN2 = document.getElementById("numero2").value;
+            resultado = eN1 * eN2;
+            MostrarTotal(resultado);
+        }
+        function dividir(){
+            let eN1 = document.getElementById("numero1").value;
+            let eN2 = document.getElementById("numero2").value;
+            resultado = eN1 / eN2;
+            MostrarTotal(resultado);
+        }
+        /*TERMINAN LOS OPERADORES PRINCIPALES*/
+        function raiz(){
+            let eN2 = document.getElementById("numero2").value;
+            resultado = eN2 ** 0.5;
+            MostrarTotal(resultado.toFixed(2));
+        }
+        function potencia(){
+            let eN1 = document.getElementById("numero1").value;
+            let eN2 = document.getElementById("numero2").value;
+            resultado = eN1 ** eN2;
+            MostrarTotal(resultado);
+        }
+        function absoluto(){
+            let eN2 = document.getElementById("numero2").value;
+            MostrarTotal(Math.abs(eN2));
+        }        
+        function random(){
+            let eN1 = +document.getElementById("numero1").value;
+            let eN2 = +document.getElementById("numero2").value; 
+            let minimo = eN1;
+            let maximo = eN2;
+            if (minimo >= maximo){
+                alert("ERROR - el minimo debe ser menos que el maximo");
+                return;
+            }
+            let resultado = Math.floor(Math.random() * (maximo - minimo) + minimo);
+            MostrarTotal(resultado);
+        }
+        /*FUNCIONES PARA REDONDEAR*/
+        function Round() {
+            MostrarTotal(Math.round(resultado));
+        }
+
+        function Floor() {
+            MostrarTotal(Math.floor(resultado));
+        }
+
+        function Ceil() {
+            MostrarTotal(Math.ceil(resultado));
+        }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+*{
+    margin: 0; /* Elimina margen por defecto */
+}
+body {
+
+    background-image: url('../img/fondo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.096);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 80px;
+    height: 550px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+.container input {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 14px;
+    text-align: center;
+    background-color: #ffffff6a;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    margin: 10px;
+    margin-bottom: 30px;
+    outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button 
+{
+    -webkit-appearance: none;
+}
+input:hover{
+    box-shadow: 0 0 5px #0000007e ;
+}
+.container button {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #34355abb;
+    background-color: #8b99b86a ;
+    box-shadow: 0 0 5px #0000007e ;
+    border: none;
+    border-radius: 8px;
+    
+}
+button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px ;
+}
+.operadores button{
+    font-size: 23px;
+    width: 100px;
+    padding: 10px 10px;
+
+}
+.operadores2 button{
+    font-size: 20px;
+    width: 200px;
+    margin-top: 10px;
+    padding: 10px 10px;
+
+}
+.operadores3 button{
+    margin-bottom: 100px;
+    font-size: 25px;
+    width: 130px;
+    margin: 1px;
+    padding: 10px 10px;
+
+}
+
+.container h1{
+    font-family: "Rowdies", sans-serif;
+    color: #0c0e869e;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.container h2 {
+    font-family: "Rowdies", sans-serif;
+    color: #0c0e869e;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
